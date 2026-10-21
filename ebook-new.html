@@ -23,7 +23,7 @@ async function open(code){
   var t=new TextDecoder().decode(p);
   try{localStorage.setItem("avp-code",code)}catch(x){}
   window.__AVP_CODE=code;
-  var X="<a href=\"gift.html#"+encodeURIComponent(code)+"\" style=\"position:fixed;left:14px;bottom:14px;z-index:99999;padding:11px 18px;border-radius:999px;background:linear-gradient(100deg,#FF7A1A,#F5C84B);color:#1A0F05;font:700 15px system-ui,Tahoma,sans-serif;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.4)\">\ud83c\udf81 \u0647\u062f\u064a\u062a\u0643</a>";var b=t.lastIndexOf("</body>");t=b>-1?t.slice(0,b)+X+t.slice(b):t+X;document.open();document.write(t);document.close();
+  var X="<a href=\"gift.html#"+encodeURIComponent(code)+"\" style=\"position:fixed;right:58px;top:12px;z-index:99999;padding:9px 14px;border-radius:999px;background:linear-gradient(100deg,#FF7A1A,#F5C84B);color:#1A0F05;font:700 14px system-ui,Tahoma,sans-serif;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.4)\">\ud83c\udf81 \u0647\u062f\u064a\u062a\u0643</a>";var b=t.lastIndexOf("</body>");t=b>-1?t.slice(0,b)+X+t.slice(b):t+X;document.open();document.write(t);document.close();
 }
 async function go(c){var e=document.getElementById("e"),m=document.getElementById("m");e.textContent="";
   try{await open(c.trim().toUpperCase())}
